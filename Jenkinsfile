@@ -53,9 +53,8 @@ pipeline{
                 docker rm review-container || true && \
                 docker run -d -p 80:80 --name review-container ${IMAGE_NAME}:${IMAGE_TAG}"
             '''
-        }
-
             }
+        }
         }
         stage('Deploy in Staging'){
             steps{
@@ -86,4 +85,6 @@ pipeline{
 
 
     }
+        }
+}
 }
