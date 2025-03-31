@@ -1,4 +1,5 @@
 pipeline {
+    agent any
     environment {
         DOCKER_HUB_CREDENTIALS = credentials('docker-hub-credentials')
         IMAGE_NAME = 'IMASSENDA/web-app'
