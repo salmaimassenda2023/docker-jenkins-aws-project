@@ -48,10 +48,10 @@ pipeline {
                     sh '''
                         chmod 600 "$SSH_KEY"
                         ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@16.171.1.77 "
-                            docker pull $IMAGE_NAME:$IMAGE_TAG &&
-                            docker stop review-container || true &&
-                            docker rm review-container || true &&
-                            docker run -d -p 80:80 --name review-container $IMAGE_NAME:$IMAGE_TAG
+                            sudo docker pull $IMAGE_NAME:$IMAGE_TAG &&
+                            sudo docker stop review-container || true &&
+                            sudo docker rm review-container || true &&
+                            sudo docker run -d -p 80:80 --name review-container $IMAGE_NAME:$IMAGE_TAG
                         "
                     '''
                 }
