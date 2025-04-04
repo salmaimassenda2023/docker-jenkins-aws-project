@@ -46,6 +46,7 @@ pipeline {
                 echo 'Déploiement en environnement de revue'
                 withCredentials([sshUserPrivateKey(credentialsId: 'aws-review-ssh-key', keyFileVariable: 'SSH_KEY')]) {
                     sh '''
+                        chmod 600 "$SSH_KEY"
                         ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@16.171.1.77 "
                             docker pull $IMAGE_NAME:$IMAGE_TAG &&
                             docker stop review-container || true &&
