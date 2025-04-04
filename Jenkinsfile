@@ -64,10 +64,10 @@ pipeline {
                 withCredentials([sshUserPrivateKey(credentialsId: 'aws-staging-ssh-key', keyFileVariable: 'SSH_KEY')]) {
                     sh '''
                         ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@51.21.181.0 "
-                            docker pull $IMAGE_NAME:$IMAGE_TAG &&
-                            docker stop staging-container || true &&
-                            docker rm staging-container || true &&
-                            docker run -d -p 80:80 --name staging-container $IMAGE_NAME:$IMAGE_TAG
+                            sudo docker pull $IMAGE_NAME:$IMAGE_TAG &&
+                            sudo docker stop staging-container || true &&
+                            sudo docker rm staging-container || true &&
+                            sudo docker run -d -p 80:80 --name staging-container $IMAGE_NAME:$IMAGE_TAG
                         "
                     '''
                 }
