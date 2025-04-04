@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         DOCKER_HUB_CREDENTIALS = credentials('docker-hub-credentials')
-        IMAGE_NAME = 'IMASSENDA/web-app'
+        IMAGE_NAME = 'imassenda/web-app'
         IMAGE_TAG = "${BUILD_NUMBER}"
     }
     
