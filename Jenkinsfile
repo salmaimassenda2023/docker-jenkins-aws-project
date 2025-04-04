@@ -80,10 +80,10 @@ pipeline {
                 withCredentials([sshUserPrivateKey(credentialsId: 'aws-production-ssh-key', keyFileVariable: 'SSH_KEY')]) {
                     sh '''
                         ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@13.60.12.219 "
-                            docker pull $IMAGE_NAME:$IMAGE_TAG &&
-                            docker stop production-container || true &&
-                            docker rm production-container || true &&
-                            docker run -d -p 80:80 --name production-container $IMAGE_NAME:$IMAGE_TAG
+                            sudo docker pull $IMAGE_NAME:$IMAGE_TAG &&
+                            sudo docker stop production-container || true &&
+                            sudo docker rm production-container || true &&
+                            sudo docker run -d -p 80:80 --name production-container $IMAGE_NAME:$IMAGE_TAG
                         "
                     '''
                 }
