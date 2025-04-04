@@ -19,7 +19,7 @@ pipeline {
             steps {
                 echo 'Test de l\'image Docker'
                 sh '''
-                    docker run -d -p 8085:80 --name test-container ${IMAGE_NAME}:${IMAGE_TAG}
+                    docker run -d -p 8085:80 --name test-container $IMAGE_NAME:$IMAGE_TAG
                     sleep 5
                     curl -s http://localhost:8085 | grep -q "Welcome" || exit 1
                     docker stop test-container
