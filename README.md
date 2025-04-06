@@ -9,6 +9,15 @@ Encadré par : **Pr. Rabhi**
 
 ---
 
+## ⚠️ Important
+
+🔗 **Rapport détaillé du projet** :  
+👉 [Cliquez ici pour consulter le rapport complet](https://drive.google.com/drive/folders/10pY_FMxSgpowM6ydKoKTLt24wj-PW2sP?usp=drive_link)  
+📌 _Merci de consulter ce rapport pour une explication approfondie de l’installation, des configurations, des problèmes rencontrés et de leurs solutions._  
+📎 **Ce document est fortement recommandé pour l’évaluation.**
+
+---
+
 ## 🎯 Objectif du Projet
 
 Mettre en place un pipeline CI/CD complet pour automatiser le **build**, les **tests**, le **push Docker** et le **déploiement** d’une application web statique via **Jenkins** et **AWS**.
@@ -28,7 +37,19 @@ Mettre en place un pipeline CI/CD complet pour automatiser le **build**, les **t
 - **GitHub**
 - **AWS EC2**
 - **Docker Hub**
+-  PowerShell (agent Jenkins sur Windows)
+- Authentification SSH
+- Nginx (pour servir l’application statique)
 
+---
+## 📁 Structure du Projet
+
+- **Jenkinsfile** : Contient les étapes de la pipeline CI/CD : Build, Test, Release et Deploy.
+- **Dockerfile** : Permet de construire l’image Docker de l’application.
+- **Dépôt GitHub** : Contient le code source et la configuration de la pipeline.
+- **Serveurs EC2** :
+  - Environnements : `Revue`, `Préproduction`, `Production`.
+- **DockerHub** : Héberge les images Docker utilisées pour le déploiement.
 ---
 
 ## 🧩 Étapes du Projet
