@@ -1,22 +1,9 @@
 # 🚀 Déploiement Automatisé d'une Application Web avec Jenkins & AWS (CI/CD)
 
-## 📌 Réalisé par
+## 📌 Réalisé par                                                                      
 - **Imassenda Salma**
 - **Boumour Marwa**
 - **Yosra El Mimouni**
-
-Encadré par : **Pr. Rabhi**
-
----
-
-## ⚠️ Important
-
-🔗 **Rapport détaillé du projet** :  
-👉 [Cliquez ici pour consulter le rapport complet](https://drive.google.com/drive/folders/10pY_FMxSgpowM6ydKoKTLt24wj-PW2sP?usp=drive_link)  
-📌 _Merci de consulter ce rapport pour une explication approfondie de l’installation, des configurations, des problèmes rencontrés et de leurs solutions._  
-📎 **Ce document est fortement recommandé pour l’évaluation.**
-
----
 
 ## 🎯 Objectif du Projet
 
@@ -42,6 +29,7 @@ Mettre en place un pipeline CI/CD complet pour automatiser le **build**, les **t
 - Nginx (pour servir l’application statique)
 
 ---
+
 ## 📁 Structure du Projet
 
 - **Jenkinsfile** : Contient les étapes de la pipeline CI/CD : Build, Test, Release et Deploy.
@@ -50,6 +38,7 @@ Mettre en place un pipeline CI/CD complet pour automatiser le **build**, les **t
 - **Serveurs EC2** :
   - Environnements : `Revue`, `Préproduction`, `Production`.
 - **DockerHub** : Héberge les images Docker utilisées pour le déploiement.
+
 ---
 
 ## 🧩 Étapes du Projet
@@ -96,4 +85,20 @@ Mettre en place un pipeline CI/CD complet pour automatiser le **build**, les **t
 [Build] → Construire l’image Docker
 [Test] → Tester l’image (container + requête HTTP)
 [Release] → Push de l’image sur Docker Hub (tagged)
-[Deploy] → Déploiement automatique sur les 3 serveurs EC2
+[Deploy] → Déploiement automatique sur les 3 serveurs EC2 
+```
+
+---
+
+## 📣 🔥 À ne pas manquer !
+
+### 📄 Rapport détaillé du projet
+
+🟡 Un rapport complet est disponible et contient toutes les étapes du projet, les configurations techniques, les problèmes rencontrés ainsi que leurs solutions.
+
+🔗 **Lien vers le rapport** :  
+👉 📂 [Accéder au rapport complet sur Google Drive](https://drive.google.com/drive/folders/10pY_FMxSgpowM6ydKoKTLt24wj-PW2sP?usp=drive_link)
+
+⚠️ **Merci de bien vouloir consulter ce document lors de l’évaluation, il est essentiel pour comprendre le déroulement et les choix techniques du projet.**
+
+---
